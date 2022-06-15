@@ -37,6 +37,20 @@ front() {
     return this.head == null ? null : this.head.value;
 }
 
+display() {
+    var listStr = "";
+    if(this.head == null) {
+        return listStr;
+    }
+    listStr += this.head.value;
+    var runner = this.head.value;
+    while(runner != null) {
+        listStr += ", " + runner.value;
+        runner = runner.next
+    }
+    return listStr;
+}
+
 }   
 
 var mySLL = new SLL();
